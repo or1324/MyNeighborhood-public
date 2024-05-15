@@ -1,0 +1,638 @@
+@startuml
+class com.amitbartfeld.myneighborhood.graphic_items.ProfessionalsGraphicItem {
++ void changeSpecificGraphicFields(ItemProperties)
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.MainActivity {
+~ ActivityResultLauncher<String[]> permissionLauncher
+# void onCreate(Bundle)
++ void enterTheApp()
++ boolean checkAuth()
++ void setAmitToastView()
+# void onPause()
++ void setProgressBar()
+}
+class com.amitbartfeld.myneighborhood.constants.NextActivityConstants {
++ {static} String nextActivitiesIntentExtraNeighborhoodNum
++ {static} String nextActivitiesIntentExtraIsAdmin
++ {static} String nextActivitiesIntentExtraPhoneNum
++ {static} String nextActivitiesIntentExtraFullName
++ {static} String chosenProfessionalPhoneIntentExtra
++ {static} String chosenProfessionalNameIntentExtra
++ {static} String isReviewsIntentExtra
+}
+class com.amitbartfeld.myneighborhood.constants.CloudPropertiesNames {
++ {static} String fullName
++ {static} String phoneNumber
++ {static} String title
++ {static} String text
++ {static} String location
++ {static} String date
++ {static} String isFinding
++ {static} String isUsed
++ {static} String price
++ {static} String itemName
++ {static} String job
++ {static} String rate
++ {static} String ratings
++ {static} String codeString
++ {static} String imageBitmapUrl
++ {static} String isAdmin
++ {static} String phoneNumberList
++ {static} String neighborhoodNum
++ {static} String time
++ {static} String image
++ {static} String peopleComing
+}
+abstract class com.amitbartfeld.myneighborhood.listeners.CloudErrorListener {
+~ ScreenTypeActivity activity
++ void onError(String)
+}
+class com.amitbartfeld.myneighborhood.properties.type.ItemProperties {
++ GeneralOperations.ScreenTypeGeneralOperations.ScreenType type
+}
+interface com.amitbartfeld.myneighborhood.listeners.AmitErrorListener {
+~ void onError(String)
+}
+class com.amitbartfeld.myneighborhood.graphical_helpers.AutoDirectionTextView {
++ void setText(CharSequence,BufferType)
+- void alignViewByTextDirectionality()
+}
+abstract class com.amitbartfeld.myneighborhood.listeners.ItemPropertiesInternetErrorDownloadListener {
+}
+abstract class com.amitbartfeld.myneighborhood.activities.abstract_activities.AmitActivity {
++ boolean isLoading
++ AppCompatTextView toast
+- AmitToast amitToast
++ {static} long toastTimeLeft
++ {static} String lastToastText
++ ProgressBar progressBar
+# void onCreate(Bundle)
++ void runInBackground(Runnable)
++ void showMessage(String)
++ void showMessageToast(String)
++ void showErrorMessageToast(String)
++ void showErrorMessage(String)
++ void showInternetError()
++ void startLoading()
++ void stopLoading()
+# void onPause()
+# void onResume()
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.MessagesRegularActivity {
+~ ImageButton send
+~ EditText textBox
+# void onCreate(Bundle)
+# ItemProperties getGeneralItemProperty()
++ void setScreenType()
++ void sendMessage()
+}
+interface com.amitbartfeld.myneighborhood.listeners.AmitDownloadsListenerFirestore {
+~ void onDownloadsFinished(List<DocumentSnapshot>)
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.both.EventsPropertiesActivity {
+~ Calendar eventDate
+# void onCreate(Bundle)
++ void setScreenType()
++ boolean checkInputSpecifically()
++ void upload()
+# String[] initEditTextNames()
+}
+class com.amitbartfeld.myneighborhood.activityInterfaces.main_screen_helper.MainScreenActivityHelper {
+- GeneralOperations generalOperations
+- ActivityResultLauncher<String> launcher
+- Runnable runAfterResult
++ void onCreate(AppCompatActivity)
++ void setRunAfterResult(Runnable)
++ ActivityResultLauncher<String> getPermissionLauncher()
++ void moveToScreen(Intent,Activity)
++ GeneralOperations getGeneralOperations()
+}
+abstract class com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.properties_only_activities.NewUserPropertiesActivity {
+# void onCreate(Bundle)
++ void onSignInSucceeded(UserItemProperties,String)
++ {abstract}void enterTheUser(UserItemProperties,String)
+}
+interface com.amitbartfeld.myneighborhood.listeners.AmitUploadListenerStorage {
+~ void onUploadFinished(String)
+}
+class com.amitbartfeld.myneighborhood.graphical_helpers.AmitToast {
+~ AppCompatTextView toast
+~ AmitActivity activity
+~ boolean canShowToast
+~ long timeOfToast
+~ Handler handler
++ void showToast(String)
++ void showToastAgain()
++ void continueToast()
++ void activityDying()
+}
+class com.amitbartfeld.myneighborhood.graphical_helpers.GeneralGraphicOperations {
++ {static} int getScreenWidth(Activity)
++ {static} int getScreenHeight(Activity)
++ {static} int getActionBarHeight(Context)
++ {static} void setMargins(View,ViewParent)
++ {static} String getTextFromPaintForWidth(int,Paint,String)
++ {static} String getSubstringFromPaintForWidth(int,Paint,String)
++ {static} int getRowHeightFromPaint(String,Paint)
++ {static} int getRowHeightFromPaintBelowBaseline(String,Paint)
++ {static} int getMaxHeightFromPaint(Paint)
++ {static} int getTextHeightFromPaint(String,Paint)
++ {static} int getTextWidthFromPaint(String,Paint)
++ {static} boolean isRTLRow(String)
++ {static} String[] getTextRowArray(String)
++ {static} void loadUrlToImageView(AppCompatImageView,String)
+}
+abstract class com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenPropertiesActivity {
++ MainScreenActivityHelper mainScreen
+# void onCreate(Bundle)
++ AmitActivity getActivity()
++ MainScreenActivityHelper getMainScreen()
+# void backToApp(String)
+}
+class com.amitbartfeld.myneighborhood.graphic_items.EventsGraphicItem {
++ void changeSpecificGraphicFields(ItemProperties)
+- void initEventRegistration(long,String)
+- void unregisterFromEvent(long,Set<String>)
+- void registerToEvent(long,String,Set<String>)
+- void setBackgroundByArrivalState(boolean,AppCompatButton)
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.MarketRegularActivity {
+# void onCreate(Bundle)
+# ItemProperties getGeneralItemProperty()
++ void setScreenType()
+# void openPropertiesScreen()
+}
+interface com.amitbartfeld.myneighborhood.listeners.AmitVerificationListener {
+~ void onVerificationSucceeded()
+}
+class com.amitbartfeld.myneighborhood.properties.UserItemProperties {
++ GeneralOperations generalOperations
+}
+class com.amitbartfeld.myneighborhood.graphic_items.FindingsGraphicItem {
++ void changeSpecificGraphicFields(ItemProperties)
+}
+class com.amitbartfeld.myneighborhood.properties.ProfessionalReviewsItemProperties {
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.EventsRegularActivity {
++ void setScreenType()
+# void openPropertiesScreen()
+# ItemProperties getGeneralItemProperty()
+}
+class com.amitbartfeld.myneighborhood.constants.MessagesTexts {
++ {static} String sendingCodeToPhoneAuthError
++ {static} String phoneNumberBelongsToAnotherUser
++ {static} String invalidNeighborhoodCode
++ {static} String registrationCompletedSuccessfullyNoCode
++ {static} String registrationCompletedSuccessfullyWithCode
++ {static} String okButtonDialog
++ {static} String loggingInCompletedSuccessfully
++ {static} String phoneNumberDoesNotExists
++ {static} String everyFieldMustBeFilled
++ {static} String writeTheCode
++ {static} String errorInEnteringCode
++ {static} String messageSent
++ {static} String messageSendingProblem
++ {static} String logoutSuccessfully
++ {static} String wrongCode
++ {static} String imageError
++ {static} String haveToChooseImage
++ {static} String ratingError
++ {static} String priceTooBig
++ {static} String eventUploaded
++ {static} String findingUploaded
++ {static} String marketUploaded
++ {static} String professionalUploaded
++ {static} String professionalAlreadyExists
+}
+interface com.amitbartfeld.myneighborhood.activityInterfaces.AmitToastActivity {
+~ void setAmitToastView()
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.only_properties.RegisterActivity {
+# void onCreate(Bundle)
++ void setScreenType()
++ boolean checkInputSpecifically()
++ void upload()
+# String[] initEditTextNames()
+# void checkNeighborhoodAndRegisterExisting(String,String,String)
++ void enterTheUser(UserItemProperties,String)
+}
+abstract class com.amitbartfeld.myneighborhood.listeners.InternetErrorUploadListenerFirestore {
+}
+class com.amitbartfeld.myneighborhood.properties.type.CloudStorageProperties {
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.ProfessionalsRegularActivity {
+~ float averageReview
+# void onCreate(Bundle)
++ void addDownloadedViewsToActivityAsGraphicItems(List<DocumentSnapshot>)
++ void setScreenType()
+# void openPropertiesScreen()
+# ItemProperties getGeneralItemProperty()
+}
+abstract class com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenRegularActivity {
++ LinearLayoutCompat lili
++ AppCompatImageButton plusButton
++ {static} int imageButtonNum
+~ ImageButton[] imageButtons
++ ScrollView scrollView
++ MainScreenActivityHelper mainScreen
+- boolean isFirst
+# void onCreate(Bundle)
++ void setProgressBar()
++ void setAmitToastView()
++ void onClick(View)
+# void hidePlusButton()
+# void showPlusButton()
++ GraphicItem[] getGraphicItemsFromDocuments(List<DocumentSnapshot>)
++ void addDownloadedViewsToActivityAsGraphicItems(List<DocumentSnapshot>)
+# void onPause()
+# {abstract}ItemProperties getGeneralItemProperty()
+- void downloadViews()
++ void onBackPressed()
++ AmitActivity getActivity()
++ MainScreenActivityHelper getMainScreen()
+# void onStart()
+}
+class com.amitbartfeld.myneighborhood.recievers.BootCompletedReceiver {
++ void onReceive(Context,Intent)
+}
+abstract class com.amitbartfeld.myneighborhood.listeners.InternetErrorUploadListenerStorage {
+~ ScreenTypeActivity activity
++ void onError(String)
+}
+interface com.amitbartfeld.myneighborhood.listeners.AmitItemPropertiesDownloadListener {
+~ void onDownloadFinished(ItemProperties)
+}
+class com.amitbartfeld.myneighborhood.recievers.AlarmReceiver {
++ void onReceive(Context,Intent)
+- void createNotificationChannel(Context)
+}
+abstract class com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.PropertiesActivity {
++ {static} int editTextNum
+- EditText[] editTexts
+- String[] editTextNames
+# void onCreate(Bundle)
+- void initEditTexts()
++ void setProgressBar()
+# void putTextInEditTexts(String[])
+# boolean isEverythingFilled()
+# {abstract}boolean checkInputSpecifically()
+# {abstract}void upload()
++ void onError(String)
++ void onDownloadsFinished(List<DocumentSnapshot>)
++ void onUploadFinished(CloudProperties)
++ void setAmitToastView()
+# void onPause()
+- void nextButtonClicked()
+# {abstract}String[] initEditTextNames()
+# void removeEditTextAtIndex(int)
+# void showEditTextAtIndex(int)
+}
+class com.amitbartfeld.myneighborhood.graphic_items.MarketGraphicItem {
++ void changeSpecificGraphicFields(ItemProperties)
+- void initPrice(int)
+- void initSMSButton(String,String,int)
+- void sendSMS(String,String,int)
+}
+class com.amitbartfeld.myneighborhood.neighborhood_encryption.Encryption {
++ {static} int keysNum
++ {static} int decodeCode(String,String)
++ {static} String encodeCode(int,String)
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.both.ProfessionalReviewsPropertiesActivity {
+~ EditText rating
+~ String professionalPhone
+# void onCreate(Bundle)
+- void showRating()
++ void setScreenType()
++ boolean checkInputSpecifically()
++ void upload()
+# String[] initEditTextNames()
++ AmitActivity getActivity()
+}
+interface com.amitbartfeld.myneighborhood.listeners.AmitUploadListenerFirestore {
+~ void onUploadFinished(CloudProperties)
+}
+class com.amitbartfeld.myneighborhood.properties.MarketItemProperties {
+}
+class com.amitbartfeld.myneighborhood.graphic_items.ProfessionalReviewsGraphicItem {
++ void changeSpecificGraphicFields(ItemProperties)
+- void setRating(long)
+}
+class com.amitbartfeld.myneighborhood.properties.CodeProperties {
+}
+class com.amitbartfeld.myneighborhood.properties.ProfessionalsItemProperties {
+}
+class com.amitbartfeld.myneighborhood.properties.EventsItemProperties {
+}
+class com.amitbartfeld.myneighborhood.properties.FindingsItemProperties {
+}
+abstract class com.amitbartfeld.myneighborhood.listeners.InternetErrorVerificationListener {
+}
+class com.amitbartfeld.myneighborhood.operations.StorageOperations {
++ {static} String getPhoneNumber(Context)
++ {static} String getFullName(Context)
++ {static} boolean getIsAdmin(Context)
++ {static} String getNeighborhoodCode(Context)
++ {static} void savePhoneNumber(Context,String)
++ {static} void saveFullName(Context,String)
++ {static} void saveIsAdmin(Context,boolean)
++ {static} void saveNeighborhoodCode(Context,String)
++ {static} void saveEverything(String,String,boolean,String,Context)
++ {static} void deleteEverything(Context)
+}
+class com.amitbartfeld.myneighborhood.properties.MessagesItemProperties {
+}
+class com.amitbartfeld.myneighborhood.constants.StorageConstants {
++ {static} String DATABASE_NAME
++ {static} String PHONE_NUMBER_DATABASE
++ {static} String FULL_NAME_DATABASE
++ {static} String IS_ADMIN_DATABASE
++ {static} String NEIGHBORHOOD_CODE_DATABASE
+}
+interface com.amitbartfeld.myneighborhood.activityInterfaces.AmitProgressBarActivity {
+~ void setProgressBar()
+}
+abstract class com.amitbartfeld.myneighborhood.listeners.InternetErrorDownloadListenerFirestore {
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.FindingsRegularActivity {
++ void setScreenType()
+# void openPropertiesScreen()
+# ItemProperties getGeneralItemProperty()
+}
+class com.amitbartfeld.myneighborhood.graphic_items.MessagesGraphicItem {
++ void changeSpecificGraphicFields(ItemProperties)
+}
+class com.amitbartfeld.myneighborhood.operations.CloudOperations {
++ {static} FirebaseAuth auth
++ {static} String getCloudBaseUrl(int)
++ {static} void setItemPropertyDocumentInFirestore(ItemProperties,AmitUploadListenerFirestore)
++ {static} void removeItemPropertyFromFirestore(ItemProperties,AmitUploadListenerFirestore)
++ {static} void logout(Context)
++ {static} void setSpecificDocumentInCloudFirestore(String,String,Object,AmitUploadListenerFirestore)
++ {static} void updatePhoneArray(String,int,AmitUploadListenerFirestore)
++ {static} void getCodeMechanism(AmitDownloadListenerFirestore)
++ {static} void getItemPropertyDocumentFromFirestore(ItemProperties,AmitItemPropertiesDownloadListener)
++ {static} void getSpecificDocumentFromCloudFirestore(String,AmitDownloadListenerFirestore)
++ {static} void getPropertyCollectionFromCloudFirestore(ItemProperties,AmitDownloadsListenerFirestore)
++ {static} void getPhoneNumberNeighborhoodNum(String,AmitDownloadListenerFirestore)
++ {static} void getLastNeighborhoodNum(AmitDownloadListenerFirestore)
++ {static} void registerToNewNeighborhood(String,String,RegisterActivity)
++ {static} void registerToExistingNeighborhood(String,String,String,int,RegisterActivity)
++ {static} void authenticatePhone(String,NewUserPropertiesActivity,AmitVerificationListener)
++ {static} void getPhoneNumber(NewUserPropertiesActivity,String,PhoneAuthProvider.OnVerificationStateChangedCallbacks)
++ {static} void login(String,int,LoginActivity)
++ {static} void uploadToCloudStorage(CloudStorageProperties,InternetErrorUploadListenerStorage)
+}
+abstract class com.amitbartfeld.myneighborhood.graphic_items.GraphicItem {
+~ MainScreenActivity mainActivityWrapper
+- ItemProperties properties
+- GeneralOperations operations
++ void init(MainScreenActivity,ItemProperties,LinearLayoutCompat,GeneralOperations)
+- void initGenerally(MainScreenActivity,LinearLayoutCompat)
+- void dealWithGraphics()
++ {abstract}void changeSpecificGraphicFields(ItemProperties)
+# void initTextByName(String,Map<String,Object>)
+# void initTime(Map<String,Object>)
+# void initImageUrl(Map<String,Object>)
+# void initBoolean(String,String,String,Map<String,Object>)
+# void initButton(String,Runnable)
+}
+abstract class com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.both.ChooseImagePropertiesActivity {
+# Bitmap image
+# ActivityResultLauncher<String> activityResultLauncher
+# void onCreate(Bundle)
+# void chooseImage()
+# void showImageChosen()
+# {abstract}void uploadToFirestore(String)
++ void upload()
+- void rotateImageByOrientationToFixDefaultRotation(Bitmap,int)
++ {static} Bitmap rotateImage(Bitmap,float)
+}
+abstract class com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.ScreenTypeActivity {
+# GeneralOperations.ScreenTypeGeneralOperations.ScreenType screenType
+# void onCreate(Bundle)
++ void onError(String)
++ void onDownloadsFinished(List<DocumentSnapshot>)
++ void onUploadFinished(CloudProperties)
+# void onPause()
++ {abstract}void setScreenType()
+}
+class com.amitbartfeld.myneighborhood.operations.EventsOperations {
++ {static} void saveEvents(Set<String>,Context)
++ {static} boolean doIArriveToThisEvent(EventsItemProperties,GeneralOperations)
++ {static} void addMeToThisEventAsync(EventsItemProperties,GeneralOperations,AmitUploadListenerFirestore)
++ {static} void removeMeFromThisEventAsync(EventsItemProperties,GeneralOperations,AmitUploadListenerFirestore)
++ {static} boolean switchMyArrivingStateToThisEvent(EventsItemProperties,GeneralOperations,AmitUploadListenerFirestore)
++ {static} int getNumOfPeopleArrivingToThisEvent(EventsItemProperties)
++ {static} Integer getAnAvailableCodeThatIsLessThan(int,Set<Integer>)
++ {static} HashSet<Integer> getEventCodesSet(Set<String>)
++ {static} int getMaxPreviousCode(Set<Integer>)
++ {static} String getEventFromStorageByTime(long,Set<String>)
++ {static} int getStorageEventCode(String)
++ {static} long getStorageEventTime(String)
++ {static} String getStorageEventDescription(String)
++ {static} String getEventSeparator()
++ {static} LinkedList<String> getEventsAtTime(long,Context)
+}
+interface com.amitbartfeld.myneighborhood.listeners.AmitDownloadListenerFirestore {
+~ void onDownloadFinished(DocumentSnapshot)
+}
+class com.amitbartfeld.myneighborhood.constants.EditTextHints {
++ {static} String phoneNumber
++ {static} String fullName
++ {static} String neighborhoodCode
++ {static} String itemName
++ {static} String location
++ {static} String findingDate
++ {static} String professionalName
++ {static} String professionalJob
++ {static} String professionalRate
++ {static} String professionalPhoneNum
++ {static} String price
++ {static} String text
++ {static} String title
++ {static} String date
++ {static} String eventLocation
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.both.FindingsPropertiesActivity {
+- CheckBox isFinding
+# void onCreate(Bundle)
+# void uploadToFirestore(String)
++ void setScreenType()
++ boolean checkInputSpecifically()
+# String[] initEditTextNames()
++ AmitActivity getActivity()
+}
+class com.amitbartfeld.myneighborhood.properties.type.OrderedByTimeProperties {
++ long creationTime
+}
+interface com.amitbartfeld.myneighborhood.activityInterfaces.main_screen_helper.MainScreenActivity {
+~ MainScreenActivityHelper getMainScreen()
+~ AmitActivity getActivity()
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.only_properties.LoginActivity {
+# void onCreate(Bundle)
++ void enterTheUser(UserItemProperties,String)
++ void setScreenType()
++ boolean checkInputSpecifically()
++ void upload()
+# String[] initEditTextNames()
+}
+class com.amitbartfeld.myneighborhood.constants.CloudNames {
++ {static} String neighborhoodCollection
++ {static} String residentsDocument
++ {static} String professionalsDocument
++ {static} String messagesDocument
++ {static} String marketDocument
++ {static} String findingsDocument
++ {static} String eventsDocument
++ {static} String codeMechanismCollection
++ {static} String codeMechanismDocument
++ {static} String reviewsCollectionName
+}
+class com.amitbartfeld.myneighborhood.properties.type.CloudProperties {
++ Map<String,Object> properties
++ String cloudUrl
+# void addProperty(String,Object)
+}
+abstract class com.amitbartfeld.myneighborhood.listeners.InternetErrorDownloadsListenerFirestore {
+}
+class com.amitbartfeld.myneighborhood.constants.GraphicalConstants {
++ {static} int viewMargins
++ {static} int linePadding
++ {static} int toastYMargin
+}
+abstract class com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.main_screen_only_activities.ListRegularActivity {
+# void onCreate(Bundle)
+# {abstract}void openPropertiesScreen()
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.both.MarketPropertiesActivity {
+~ EditText price
+~ CheckBox isUsed
+# void onCreate(Bundle)
+# void uploadToFirestore(String)
++ void setScreenType()
++ boolean checkInputSpecifically()
+# String[] initEditTextNames()
++ AmitActivity getActivity()
+}
+class com.amitbartfeld.myneighborhood.operations.GeneralOperations {
++ String phoneNum
++ String fullName
++ int neighborhoodNum
++ boolean isAdmin
+- {static} boolean isAsyncButtonPressed
+- {static} TextToSpeech tts
++ {static} boolean adminOrMyPhone(String,Context)
++ String getProfessionalsReviewSubUrl(long)
++ String getSubUrl(String,String)
++ String getUrlFromScreenTypeAndOrderParameter(ScreenTypeGeneralOperations.ScreenType,String)
++ String getGeneralUrlFromScreenType(ScreenTypeGeneralOperations.ScreenType)
++ {static} void EnterTheApp(AppCompatActivity,String,boolean,int,String)
++ {static} void TTS(String,Locale,Context)
++ {static} void asyncButtonWorking()
++ {static} void asyncButtonStopped()
++ {static} boolean canPressAsyncButton()
++ {static} boolean isInUiThread(Context)
+}
+class com.amitbartfeld.myneighborhood.operations.GeneralOperations$ScreenTypeGeneralOperations {
++ {static} GraphicItem getGraphicItemFromScreenType(MainScreenRegularActivity,DocumentSnapshot,LinearLayoutCompat,ScreenType,GeneralOperations)
+- {static} GraphicItem getGraphicItemFromXml(Activity,int)
++ {static} String getGeneralSubUrlFromScreenType(ScreenType)
++ {static} String getOrderByFromScreenType(ScreenType)
++ {static} int getButtonIdFromScreenType(ScreenType)
+}
+enum com.amitbartfeld.myneighborhood.operations.ScreenType {
++  Market
++  Messages
++  Professionals
++  ProfessionalReviews
++  Findings
++  Events
++  Register
++  Login
+}
+class com.amitbartfeld.myneighborhood.activities.used_activities.both.ProfessionalsPropertiesActivity {
+~ EditText phone
+# void onCreate(Bundle)
++ void setScreenType()
++ boolean checkInputSpecifically()
++ void upload()
+# String[] initEditTextNames()
++ AmitActivity getActivity()
+}
+
+
+com.amitbartfeld.myneighborhood.graphic_items.GraphicItem <|-- com.amitbartfeld.myneighborhood.graphic_items.ProfessionalsGraphicItem
+com.amitbartfeld.myneighborhood.activities.abstract_activities.AmitActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.MainActivity
+com.amitbartfeld.myneighborhood.listeners.AmitErrorListener <|.. com.amitbartfeld.myneighborhood.listeners.CloudErrorListener
+com.amitbartfeld.myneighborhood.properties.type.CloudProperties <|-- com.amitbartfeld.myneighborhood.properties.type.ItemProperties
+com.amitbartfeld.myneighborhood.graphical_helpers.AppCompatTextView <|-- com.amitbartfeld.myneighborhood.graphical_helpers.AutoDirectionTextView
+com.amitbartfeld.myneighborhood.listeners.AmitItemPropertiesDownloadListener <|.. com.amitbartfeld.myneighborhood.listeners.ItemPropertiesInternetErrorDownloadListener
+com.amitbartfeld.myneighborhood.listeners.CloudErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.ItemPropertiesInternetErrorDownloadListener
+com.amitbartfeld.myneighborhood.activityInterfaces.AmitProgressBarActivity <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.AmitActivity
+com.amitbartfeld.myneighborhood.activityInterfaces.AmitToastActivity <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.AmitActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.amitbartfeld.myneighborhood.activities.abstract_activities.AmitActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenRegularActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.MessagesRegularActivity
+com.amitbartfeld.myneighborhood.listeners.AmitErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.AmitDownloadsListenerFirestore
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenPropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.both.EventsPropertiesActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.PropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.properties_only_activities.NewUserPropertiesActivity
+com.amitbartfeld.myneighborhood.listeners.AmitErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.AmitUploadListenerStorage
+com.amitbartfeld.myneighborhood.activityInterfaces.main_screen_helper.MainScreenActivity <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenPropertiesActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.PropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenPropertiesActivity
+com.amitbartfeld.myneighborhood.graphic_items.GraphicItem <|-- com.amitbartfeld.myneighborhood.graphic_items.EventsGraphicItem
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.main_screen_only_activities.ListRegularActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.MarketRegularActivity
+com.amitbartfeld.myneighborhood.listeners.AmitErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.AmitVerificationListener
+com.amitbartfeld.myneighborhood.properties.type.ItemProperties <|-- com.amitbartfeld.myneighborhood.properties.UserItemProperties
+com.amitbartfeld.myneighborhood.graphic_items.GraphicItem <|-- com.amitbartfeld.myneighborhood.graphic_items.FindingsGraphicItem
+com.amitbartfeld.myneighborhood.properties.type.OrderedByTimeProperties <|-- com.amitbartfeld.myneighborhood.properties.ProfessionalReviewsItemProperties
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.main_screen_only_activities.ListRegularActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.EventsRegularActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.properties_only_activities.NewUserPropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.only_properties.RegisterActivity
+com.amitbartfeld.myneighborhood.listeners.AmitUploadListenerFirestore <|.. com.amitbartfeld.myneighborhood.listeners.InternetErrorUploadListenerFirestore
+com.amitbartfeld.myneighborhood.listeners.CloudErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.InternetErrorUploadListenerFirestore
+com.amitbartfeld.myneighborhood.properties.type.CloudProperties <|-- com.amitbartfeld.myneighborhood.properties.type.CloudStorageProperties
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.main_screen_only_activities.ListRegularActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.ProfessionalsRegularActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.OnClickListener <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenRegularActivity
+com.amitbartfeld.myneighborhood.activityInterfaces.main_screen_helper.MainScreenActivity <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenRegularActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.ScreenTypeActivity <|-- com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenRegularActivity
+android.content.BroadcastReceiver <|-- com.amitbartfeld.myneighborhood.recievers.BootCompletedReceiver
+com.amitbartfeld.myneighborhood.listeners.AmitUploadListenerStorage <|.. com.amitbartfeld.myneighborhood.listeners.InternetErrorUploadListenerStorage
+com.amitbartfeld.myneighborhood.listeners.AmitErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.AmitItemPropertiesDownloadListener
+android.content.BroadcastReceiver <|-- com.amitbartfeld.myneighborhood.recievers.AlarmReceiver
+com.amitbartfeld.myneighborhood.listeners.AmitUploadListenerFirestore <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.PropertiesActivity
+com.amitbartfeld.myneighborhood.listeners.AmitDownloadsListenerFirestore <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.PropertiesActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.ScreenTypeActivity <|-- com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.PropertiesActivity
+com.amitbartfeld.myneighborhood.graphic_items.GraphicItem <|-- com.amitbartfeld.myneighborhood.graphic_items.MarketGraphicItem
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenPropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.both.ProfessionalReviewsPropertiesActivity
+com.amitbartfeld.myneighborhood.listeners.AmitErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.AmitUploadListenerFirestore
+com.amitbartfeld.myneighborhood.properties.type.OrderedByTimeProperties <|-- com.amitbartfeld.myneighborhood.properties.MarketItemProperties
+com.amitbartfeld.myneighborhood.graphic_items.GraphicItem <|-- com.amitbartfeld.myneighborhood.graphic_items.ProfessionalReviewsGraphicItem
+com.amitbartfeld.myneighborhood.properties.type.CloudProperties <|-- com.amitbartfeld.myneighborhood.properties.CodeProperties
+com.amitbartfeld.myneighborhood.properties.type.ItemProperties <|-- com.amitbartfeld.myneighborhood.properties.ProfessionalsItemProperties
+com.amitbartfeld.myneighborhood.properties.type.OrderedByTimeProperties <|-- com.amitbartfeld.myneighborhood.properties.EventsItemProperties
+com.amitbartfeld.myneighborhood.properties.type.OrderedByTimeProperties <|-- com.amitbartfeld.myneighborhood.properties.FindingsItemProperties
+com.amitbartfeld.myneighborhood.listeners.AmitVerificationListener <|.. com.amitbartfeld.myneighborhood.listeners.InternetErrorVerificationListener
+com.amitbartfeld.myneighborhood.listeners.CloudErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.InternetErrorVerificationListener
+com.amitbartfeld.myneighborhood.properties.type.OrderedByTimeProperties <|-- com.amitbartfeld.myneighborhood.properties.MessagesItemProperties
+com.amitbartfeld.myneighborhood.listeners.AmitDownloadListenerFirestore <|.. com.amitbartfeld.myneighborhood.listeners.InternetErrorDownloadListenerFirestore
+com.amitbartfeld.myneighborhood.listeners.CloudErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.InternetErrorDownloadListenerFirestore
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.main_screen_only_activities.ListRegularActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.only_main_screen.FindingsRegularActivity
+com.amitbartfeld.myneighborhood.graphic_items.GraphicItem <|-- com.amitbartfeld.myneighborhood.graphic_items.MessagesGraphicItem
+androidx.constraintlayout.widget.ConstraintLayout <|-- com.amitbartfeld.myneighborhood.graphic_items.GraphicItem
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenPropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.both.ChooseImagePropertiesActivity
+com.amitbartfeld.myneighborhood.listeners.AmitErrorListener <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.ScreenTypeActivity
+com.amitbartfeld.myneighborhood.listeners.AmitDownloadsListenerFirestore <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.ScreenTypeActivity
+com.amitbartfeld.myneighborhood.listeners.AmitUploadListenerFirestore <|.. com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.ScreenTypeActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.AmitActivity <|-- com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.ScreenTypeActivity
+com.amitbartfeld.myneighborhood.listeners.AmitErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.AmitDownloadListenerFirestore
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.both.ChooseImagePropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.both.FindingsPropertiesActivity
+com.amitbartfeld.myneighborhood.properties.type.ItemProperties <|-- com.amitbartfeld.myneighborhood.properties.type.OrderedByTimeProperties
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.properties_only_activities.NewUserPropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.only_properties.LoginActivity
+java.io.Serializable <|.. com.amitbartfeld.myneighborhood.properties.type.CloudProperties
+com.amitbartfeld.myneighborhood.listeners.AmitDownloadsListenerFirestore <|.. com.amitbartfeld.myneighborhood.listeners.InternetErrorDownloadsListenerFirestore
+com.amitbartfeld.myneighborhood.listeners.CloudErrorListener <|-- com.amitbartfeld.myneighborhood.listeners.InternetErrorDownloadsListenerFirestore
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenRegularActivity <|-- com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.main_screen_only_activities.ListRegularActivity
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.both.ChooseImagePropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.both.MarketPropertiesActivity
+com.amitbartfeld.myneighborhood.operations.GeneralOperations +.. com.amitbartfeld.myneighborhood.operations.GeneralOperations$ScreenTypeGeneralOperations
+com.amitbartfeld.myneighborhood.activities.abstract_activities.amit_activities.screen_type_activities.MainScreenPropertiesActivity <|-- com.amitbartfeld.myneighborhood.activities.used_activities.both.ProfessionalsPropertiesActivity
+@enduml

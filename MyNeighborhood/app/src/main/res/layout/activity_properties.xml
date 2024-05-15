@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context=".activities.abstract_activities.amit_activities.screen_type_activities.PropertiesActivity"
+    android:background="@drawable/fill_details_screen">
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:visibility="invisible"
+        android:hint=""
+        android:includeFontPadding="false"
+        android:textSize="10pt"
+        android:inputType="text"
+        android:layoutDirection="rtl"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/edittext2"
+        app:layout_constraintTop_toBottomOf="@id/guideline6"
+        app:layout_constraintRight_toLeftOf="@id/guideline4"
+        app:layout_constraintLeft_toRightOf="@id/guideline5" />
+
+    <EditText
+        android:id="@+id/edittext2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:visibility="invisible"
+        android:includeFontPadding="false"
+        android:hint=""
+        android:textSize="10pt"
+        android:inputType="text"
+        android:layoutDirection="rtl"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/edittext3"
+        app:layout_constraintTop_toBottomOf="@id/edittext1"
+        app:layout_constraintRight_toLeftOf="@id/guideline4"
+        app:layout_constraintLeft_toRightOf="@id/guideline5" />
+
+    <EditText
+        android:id="@+id/edittext3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:ems="10"
+        android:includeFontPadding="false"
+        android:hint=""
+        android:textSize="10pt"
+        android:inputType="text"
+        android:layoutDirection="rtl"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/edittext4"
+        app:layout_constraintTop_toBottomOf="@id/edittext2"
+        app:layout_constraintRight_toLeftOf="@id/guideline4"
+        app:layout_constraintLeft_toRightOf="@id/guideline5" />
+
+    <EditText
+        android:id="@+id/edittext4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:ems="10"
+        android:includeFontPadding="false"
+        android:hint=""
+        android:textSize="10pt"
+        android:inputType="text"
+        android:layoutDirection="rtl"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/guideline15"
+        app:layout_constraintTop_toBottomOf="@id/edittext3"
+        app:layout_constraintRight_toLeftOf="@id/guideline4"
+        app:layout_constraintLeft_toRightOf="@id/guideline5" />
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/guideline11"
+        app:layout_constraintTop_toBottomOf="@id/edittext4"
+        app:layout_constraintLeft_toRightOf="@id/guideline5"
+        app:layout_constraintRight_toLeftOf="@id/properties_button">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/chosen_image"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:text="התמונה שנבחרה: "
+            android:padding="10dp"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/chosen_image"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:scaleType="centerInside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMinTextSize="1sp"
+        android:autoSizeTextType="uniform"
+        android:text="המשך"
+        app:layout_constraintLeft_toRightOf="@id/guideline13"
+        app:layout_constraintRight_toLeftOf="@id/guideline14"
+        app:layout_constraintBottom_toTopOf="@id/guideline12"
+        app:layout_constraintTop_toBottomOf="@id/guideline11"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.53" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/properties_textview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:autoSizeMinTextSize="1sp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintTop_toBottomOf="@id/guideline16"
+        app:layout_constraintBottom_toTopOf="@id/guideline11"
+        app:layout_constraintRight_toLeftOf="@id/guideline14"
+        app:layout_constraintLeft_toRightOf="@id/guideline5"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/properties_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="2:1"
+        android:autoSizeMinTextSize="1sp"
+        android:autoSizeTextType="uniform"
+        android:text="בחר תמונה"
+        app:layout_constraintTop_toBottomOf="@id/guideline16"
+        app:layout_constraintBottom_toTopOf="@id/guideline11"
+        app:layout_constraintRight_toLeftOf="@id/guideline4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="2:1"
+        android:autoSizeMinTextSize="1sp"
+        android:autoSizeTextType="uniform"
+        android:text="הירשם"
+        app:layout_constraintTop_toBottomOf="@id/guideline19"
+        app:layout_constraintBottom_toTopOf="@id/guideline20"
+        app:layout_constraintRight_toLeftOf="@id/guideline4" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:maxLines="1"
+        app:layout_constraintDimensionRatio="2:1"
+        android:autoSizeMinTextSize="1sp"
+        android:autoSizeTextType="uniform"
+        android:text="שכונה חדשה"
+        app:layout_constraintTop_toBottomOf="@id/guideline19"
+        app:layout_constraintBottom_toTopOf="@id/guideline20"
+        app:layout_constraintLeft_toRightOf="@id/guideline5" />
+
+    <ProgressBar
+        android:id="@+id/load"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/guideline5"
+        app:layout_constraintRight_toLeftOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/guideline17"
+        app:layout_constraintBottom_toTopOf="@id/guideline18" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:background="@drawable/amit_toast" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/guideline11"
+        app:layout_constraintTop_toBottomOf="@id/guideline15">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/rating"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:inputType="number"
+            android:hint="rating"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:maxLength="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

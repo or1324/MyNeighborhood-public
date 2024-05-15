@@ -1,0 +1,38 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ornev/Desktop/My-Neighborhood-main/MyNeighborhood/app/src/main/res/drawable/num_of_people_arrive.xml" value="0.1515" />
+        <entry key="..\:/Users/ornev/Desktop/My-Neighborhood-main/MyNeighborhood/app/src/main/res/drawable/num_of_people_button_not_arriving.xml" value="0.1515" />
+        <entry key="..\:/Users/ornev/Desktop/My-Neighborhood-main/MyNeighborhood/app/src/main/res/layout/events_item_layout.xml" value="0.1796875" />
+        <entry key="..\:/Users/ornev/Desktop/My-Neighborhood-main/MyNeighborhood/app/src/main/res/layout/messages_item_layout.xml" value="0.12395833333333334" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/drawable/amit_toast.xml" value="0.1115" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/drawable/another_user_message_background.xml" value="0.124" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/drawable/found_background.xml" value="0.1" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/drawable/item_background.xml" value="0.174" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/drawable/main_screen_list_divider.xml" value="0.1" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout-v26/activity_properties.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/activity_login.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/activity_main_screen.xml" value="0.1" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/activity_properties.xml" value="0.22" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/activity_register.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/code_edit_text.xml" value="0.1" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/events_item_layout.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/findings_item_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/login_register.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/market_item_layout.xml" value="0.1640625" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/messages_item_layout.xml" value="0.22" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/layout/professions_item_layout.xml" value="0.1640625" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/ornev/Documents/GitHub/My-Neighborhood/MyNeighborhood/app/src/main/res/xml/ids.xml" value="0.1796875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

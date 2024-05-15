@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "160202354433",
+    "project_id": "my-neighborhood-696f3",
+    "storage_bucket": "my-neighborhood-696f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160202354433:android:858956d6aec91ecd213500",
+        "android_client_info": {
+          "package_name": "com.amitbartfeld.myneighborhood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160202354433-eb9mdpbs94j84sn8euihjvoca9vau00v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3QaiAAD3WGFH6Y49jMUqJJ3Z8pvmkKOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160202354433-eb9mdpbs94j84sn8euihjvoca9vau00v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

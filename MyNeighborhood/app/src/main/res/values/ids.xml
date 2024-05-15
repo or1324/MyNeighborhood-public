@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- market -->
+    <item name="image_button1" type="id"/>
+    <!-- events -->
+    <item name="image_button2" type="id"/>
+    <!-- findings -->
+    <item name="image_button3" type="id"/>
+    <!-- professionals -->
+    <item name="image_button4" type="id"/>
+    <!-- messages -->
+    <item name="image_button5" type="id"/>
+
+    <item name="full_name" type="id" />
+    <item name="phone_number" type="id" />
+    <item name="title" type="id" />
+    <item name="text" type="id" />
+    <item name="location" type="id" />
+    <item name="date" type="id" />
+    <item name="is_finding" type="id" />
+    <item name="is_used" type="id" />
+    <item name="price" type="id" />
+    <item name="item_name" type="id" />
+    <item name="job" type="id" />
+    <item name="rate" type="id" />
+    <item name="ratings" type="id" />
+    <item name="image_bitmap" type="id" />
+    <item name="is_admin" type="id" />
+    <item name="people_coming" type="id" />
+
+</resources>
